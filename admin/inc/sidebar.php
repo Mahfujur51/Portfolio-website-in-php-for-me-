@@ -82,9 +82,9 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/tables/basic-table.html">
-          <span class="menu-title">Tables</span>
-          <i class="mdi mdi-table-large menu-icon"></i>
+        <a class="nav-link" href="social.php">
+          <span class="menu-title">Social</span>
+          <i class="mdi mdi-account-plus menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
