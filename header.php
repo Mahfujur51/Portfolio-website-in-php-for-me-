@@ -13,6 +13,7 @@ include('include/db.php');
     <title>Welcome||Mahfujur.dev</title>
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
     <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome.min.css">

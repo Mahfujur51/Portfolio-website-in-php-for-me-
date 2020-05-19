@@ -87,22 +87,32 @@
               <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
               <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Md. Mahfujur Rahman </h2>
               <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Designer,Developer and Graphic Designer</p>
+              <?php 
+
+               $sql4="SELECT * FROM tbl_social";
+               $query4=mysqli_query($con,$sql4);
+               while ($row4=mysqli_fetch_array($query4)) {
+                 # code...
+               
+
+               ?>
               <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
                 <li>
-                  <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
+                  <a class="facebook" href="<?php echo $row4['fb']; ?>"><i class="icon-social-facebook"></i></a>
                 </li>
                 <li>
-                  <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
+                  <a class="twitter" href="<?php echo $row4['tw']; ?>"><i class="icon-social-twitter"></i></a>
                 </li>
                 <li>
-                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
+                  <a class="instagram" href="<?php echo $row4['insta']; ?>"><i class="icon-social-instagram"></i></a>
                 </li>
                 <li>
-                  <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
+                  <a class="linkedin" href="<?php echo $row4['linkdin']; ?>"><i class="icon-social-linkedin"></i></a>
                 </li>
               </ul>
+              <?php } ?>
               <div class="header-button wow fadeInUp" data-wow-delay="1s">
-                <a href="#" class="btn btn-common">Get a Free Quote</a>
+                <a href="#contact" class="btn btn-common">Contact With Me</a>
               </div>
             </div>
           </div>
@@ -144,7 +154,19 @@
               <li><span class="pro-title"> Location </span> <span class="pro-detail"><?php echo $result['location']; ?></span></li>
               <li><span class="pro-title"> e-mail </span> <span class="pro-detail"><?php echo $result['email']; ?></span></li>
               <li><span class="pro-title"> Phone </span> <span class="pro-detail">+(88)<?php echo $result['phone']; ?></span></li>
-              <li><span class="pro-title"> Freelance </span> <span class="pro-detail">Available</span></li>
+              <li><span class="pro-title"> Freelance </span> <span class="pro-detail"><?php $st=$result['freelancer'];
+                if($st==0)
+                {
+                  ?>
+                  Unavailable
+                <?php }else{ ?>
+                  Available
+
+              <?php   } ?>
+
+
+                
+              </span></li>
             </ul>
           </div>
           <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
@@ -163,12 +185,13 @@
 <section id="services" class="services section-padding">
   <h2 class="section-title wow flipInX" data-wow-delay="0.4s">What I do</h2>
   <div class="container">
+
     <div class="row">
       <!-- Services item -->
       <div class="col-md-6 col-lg-3 col-xs-12">
         <div class="services-item wow fadeInDown" data-wow-delay="0.3s">
           <div class="icon">
-            <i class="icon-grid"></i>
+            <i class="fas fa-th-large fa-5x" style='color:#43B0EF'></i>
           </div>
           <div class="services-content">
             <h3><a href="#">Front-end Development</a></h3>
@@ -180,7 +203,7 @@
       <div class="col-md-6 col-lg-3 col-xs-12">
         <div class="services-item wow fadeInDown" data-wow-delay="0.6s">
           <div class="icon">
-            <i class="icon-layers"></i>
+            <i class="fab fa-wordpress fa-5x" style='color:#43B0EF'></i>
           </div>
           <div class="services-content">
             <h3><a href="#">Graphic Design</a></h3>
@@ -192,7 +215,7 @@
       <div class="col-md-6 col-lg-3 col-xs-12">
         <div class="services-item wow fadeInDown" data-wow-delay="0.9s">
           <div class="icon">
-            <i class="icon-briefcase"></i>
+            <i class="fab fa-php fa-5x" style='color:#43B0EF'></i>
           </div>
           <div class="services-content">
             <h3><a href="#">Business Branding</a></h3>
@@ -204,7 +227,7 @@
       <div class="col-md-6 col-lg-3 col-xs-12">
         <div class="services-item wow fadeInDown" data-wow-delay="1.2s">
           <div class="icon">
-            <i class="icon-bubbles"></i>
+            <i class="fab fa-laravel fa-5x" style='color:#43B0EF'></i>
           </div>
           <div class="services-content">
             <h3><a href="#">Consultancy</a></h3>
@@ -221,6 +244,7 @@
 <div id="resume" class="section-padding">
   <div class="container">
     <div class="row">
+
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="education wow fadeInRight" data-wow-delay="0.3s">
           <ul class="timeline">
@@ -228,63 +252,50 @@
               <i class="icon-graduation"></i>
               <h2 class="timelin-title">Education</h2>
             </li>
-            <li>
+            <?php 
+            $sql2="SELECT * FROM tbl_education";
+            $query2=mysqli_query($con,$sql2);
+            while ($row2=mysqli_fetch_array($query2)) { ?>
+             <li>
               <div class="content-text">
-                <h3 class="line-title">Bsc In CSE - Yale University</h3>
-                <span>2012 - 2016</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
+                <h3 class="line-title"><?php echo $row2['Subject']; ?>- <?php echo $row2['instituition']; ?></h3>
+                <span><?php echo $row2['start']; ?> - <?php echo $row2['end']; ?> </span>
+                <p class="line-text"><?php echo $row2['details']; ?> </p>
               </div>
             </li>
-            <li>
-              <div class="content-text">
-                <h3 class="line-title">Higher Secondary School - San Francisco College</h3>
-                <span>2010 - 2012</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-              </div>
-            </li>
-            <li>
-              <div class="content-text">
-                <h3 class="line-title">Secondary School - Labratory High School</h3>
-                <span>2005 - 2010</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <?php  } ?>
+        </ul>
       </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <div class="experience wow fadeInRight" data-wow-delay="0.6s">
-          <ul class="timeline">
-            <li>
-              <i class="icon-briefcase"></i>
-              <h2 class="timelin-title">Experience</h2>
-            </li>
-            <li>
-              <div class="content-text">
-                <h3 class="line-title">Art Director - Tesla Inc.</h3>
-                <span>Jan 2018 - Present</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-              </div>
-            </li>
-            <li>
-              <div class="content-text">
-                <h3 class="line-title">UX/UI Designer - Samsung</h3>
-                <span>Nov 2016 - Dec 2017</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-              </div>
-            </li>
-            <li>
-              <div class="content-text">
-                <h3 class="line-title">Intern UI Designer - UIdeck</h3>
-                <span>Mar 2015 - Oct 2016</span>
-                <p class="line-text">Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+    </div>
+    
+    <div class="col-lg-6 col-md-6 col-sm-6">
+      <div class="experience wow fadeInRight" data-wow-delay="0.6s">
+        <ul class="timeline">
+          <li>
+            <i class="icon-briefcase"></i>
+            <h2 class="timelin-title">Experience</h2>
+          </li>
+          <?php 
+            $sql3="SELECT * FROM tbl_experience";
+            $query3=mysqli_query($con,$sql3);
+            while ($row3=mysqli_fetch_array($query3)) {
+              # code...
+            
+           ?>
+          <li>
+            <div class="content-text">
+              <h3 class="line-title"><?php echo $row3['subject']; ?> -<?php echo $row3['company']; ?></h3>
+              <span><?php echo $row3['start']; ?> - <?php echo $row3['end']; ?></span>
+              <p class="line-text"><?php echo $row3['details']; ?></p>
+            </div>
+          </li>
+          <?php } ?>
+        
+        </ul>
       </div>
     </div>
   </div>
+</div>
 </div>
 <!-- Resume Section End -->
 
@@ -585,13 +596,13 @@
       <div class="col-md-12">
         <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
           <?php 
-            $ssql="SELECT * FROM tbl_social";
-            $squery=mysqli_query($con,$ssql);
-            while ($srow=mysqli_fetch_array($squery)) {
+          $ssql="SELECT * FROM tbl_social";
+          $squery=mysqli_query($con,$ssql);
+          while ($srow=mysqli_fetch_array($squery)) {
               # code...
-            
+
            ?>
-          <ul class="social-icon">
+           <ul class="social-icon">
             <li>
               <a class="facebook" href="<?php echo $srow['fb']; ?>"><i class="icon-social-facebook"></i></a>
             </li>
@@ -604,14 +615,14 @@
             <li>
               <a class="instagram" href="<?php echo $srow['linkdin']; ?>"><i class="icon-social-linkedin"></i></a>
             </li>
-           
+
           </ul>
-          <?php  } ?>
-          <p>Copyright © <?php echo Date("Y"); ?> || Mahfujur.dev </p>
-        </div>
+        <?php  } ?>
+        <p>Copyright © <?php echo Date("Y"); ?> || Mahfujur.dev </p>
       </div>
     </div>
   </div>
+</div>
 </footer>
 <!-- Footer Section End -->
 <?php include("footer.php") ?>
