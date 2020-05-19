@@ -100,9 +100,6 @@
                   <li>
                     <a class="linkedin" href="#"><i class="icon-social-linkedin"></i></a>
                   </li>
-                  <li>
-                    <a class="google" href="#"><i class="icon-social-google"></i></a>
-                  </li>
                 </ul>
                 <div class="header-button wow fadeInUp" data-wow-delay="1s">
                   <a href="#" class="btn btn-common">Get a Free Quote</a>
