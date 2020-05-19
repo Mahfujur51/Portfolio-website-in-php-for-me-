@@ -47,6 +47,19 @@
           </ul>
         </div>
       </li>
+        <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-experience" aria-expanded="false" aria-controls="ui-experience">
+          <span class="menu-title">Experience</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-poll menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-experience">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="addexperience.php">Add Expericen</a></li>
+            <li class="nav-item"> <a class="nav-link" href="showexperience.php">Manage Experience</a></li>
+          </ul>
+        </div>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" href="pages/icons/mdi.html">

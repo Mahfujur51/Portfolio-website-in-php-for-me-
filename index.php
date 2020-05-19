@@ -85,8 +85,8 @@
             <div class="col-md-12 col-sm-12 text-center">
               <div class="contents">
                 <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
-                <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Tom Saulnier</h2>
-                <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Developer and Graphic Designer</p>
+                <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Md. Mahfujur Rahman </h2>
+                <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Designer,Developer and Graphic Designer</p>
                 <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
                   <li>
                     <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
@@ -117,31 +117,42 @@
     <!-- About Section Start -->
     <section id="about" class="section-padding">
       <div class="container">
-        <div class="row">
+        <div class="row"> <?php 
+
+              $psql="SELECT * FROM tbl_about";
+              $pquery=mysqli_query($con,$psql);
+              while ($result=mysqli_fetch_array($pquery)) {
+                # code...
+
+             ?>
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-              <img class="img-fluid" src="assets/img/about/about-1.jpg" alt="">
+              <img class="img-fluid" src="admin/images/<?php echo $result['image']; ?>" alt="">
             </div>
           </div> 
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+           
             <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
               <h3>Hi Guys!</h3>
-              <p>Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.</p>
+              <p><?php echo $result['description']; ?></p>
               <div class="about-profile">
                 <ul class="admin-profile">
-                  <li><span class="pro-title"> Name </span> <span class="pro-detail">Tom Saulnier</span></li>
-                  <li><span class="pro-title"> Age </span> <span class="pro-detail">25 Years</span></li>
-                  <li><span class="pro-title"> Experience </span> <span class="pro-detail">4 Years</span></li>
-                  <li><span class="pro-title"> Country </span> <span class="pro-detail">USA</span></li>
-                  <li><span class="pro-title"> Location </span> <span class="pro-detail">San Francisco, CA</span></li>
-                  <li><span class="pro-title"> e-mail </span> <span class="pro-detail">email@example.com</span></li>
-                  <li><span class="pro-title"> Phone </span> <span class="pro-detail">+ (00) 123 456 789</span></li>
+                  <li><span class="pro-title"> Name </span> <span class="pro-detail"><?php echo $result['name']; ?></span></li>
+                  <li><span class="pro-title"> Age </span> <span class="pro-detail"><?php echo $result['age']; ?></span></li>
+                  <li><span class="pro-title"> Experience </span> <span class="pro-detail"><?php echo $result['experience']; ?></span></li>
+                  <li><span class="pro-title"> Country </span> <span class="pro-detail"><?php echo $result['country']; ?></span></li>
+                  <li><span class="pro-title"> Location </span> <span class="pro-detail"><?php echo $result['location']; ?></span></li>
+                  <li><span class="pro-title"> e-mail </span> <span class="pro-detail"><?php echo $result['email']; ?></span></li>
+                  <li><span class="pro-title"> Phone </span> <span class="pro-detail">+(88)<?php echo $result['phone']; ?></span></li>
                   <li><span class="pro-title"> Freelance </span> <span class="pro-detail">Available</span></li>
                 </ul>
               </div>
               <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
-              <a href="#" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
+              <a href="#contact" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
             </div>
+            <?php 
+              }
+               ?>
           </div>   
         </div>
       </div>
@@ -500,28 +511,39 @@
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="footer-right-area wow fadeIn">
                 <h2>Contact Address</h2>
+                <?php 
+                  $sql="SELECT * FROM tbl_about";
+                  $query=mysqli_query($con,$sql);
+                  while ($result=mysqli_fetch_array($query)) {
+                    # code...
+
+                 ?>
                 <div class="footer-right-contact">
                   <div class="single-contact">
                     <div class="contact-icon">
                       <i class="fa fa-map-marker"></i>
                     </div>
-                    <p>San Francisco, CA</p>
+                    <p><?php echo $result['location']; ?>,<?php echo $result['country']; ?></p>
                   </div>
                   <div class="single-contact">
                     <div class="contact-icon">
                       <i class="fa fa-envelope"></i>
                     </div>
-                    <p><a href="mailto:hello@tom.com">hello@tom.com</a></p>
-                    <p><a href="mailto:tomsaulnier@gmail.com">tomsaulnier@gmail.com</a></p>
+                    <p><a href="mailto:overcastmoon@gmail.com"><?php echo$result['email'] ?></a></p>
+                    <p><a href="mailto:mahfujurmoon5@gmail.com">mahfujurmoon5@gmail.com</a></p>
                   </div>
                   <div class="single-contact">
                     <div class="contact-icon">
                       <i class="fa fa-phone"></i>
                     </div>
-                    <p><a href="#">+ (00) 123 456 789</a></p>
-                    <p><a href="#">+ (00) 123 344 789</a></p>
+                    <p><a href="#">+(88)<?php echo $result['phone']; ?></a></p>
+                    <p><a href="#">+(88)01758785406</a></p>
+                   
                   </div>
                 </div>
+
+                  <?php 
+                  } ?>
               </div>
             </div>
             <div class="col-md-12">
