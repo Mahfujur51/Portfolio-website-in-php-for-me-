@@ -70,15 +70,15 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/forms/basic_elements.html">
-          <span class="menu-title">Forms</span>
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+        <a class="nav-link" href="updateproject.php">
+          <span class="menu-title">Update Project</span>
+          <i class="mdi mdi-clipboard-check menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="pages/charts/chartjs.html">
-          <span class="menu-title">Charts</span>
-          <i class="mdi mdi-chart-bar menu-icon"></i>
+        <a class="nav-link" href="contact.php">
+          <span class="menu-title">Message</span>
+          <i class="mdi mdi-message menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">

@@ -473,7 +473,21 @@
             <div class="col-md-6 col-lg-6 col-sm-12">
               <div class="contact-block">
                 <h2>Contact Form</h2>
-                <form id="contactForm">
+                <?php if (isset($_POST['submit'])) {
+                  $name=$_POST['name'];
+                  $email=$_POST['email'];
+                  $subject=$_POST['subject'];
+                  $message=$_POST['message'];
+                  $status=0;
+                  $csql="INSERT INTO tbl_contact(name,email,subject,message,status)VALUES('$name','$email','$subject','$message','$status')";
+                  $cquery=mysqli_query($con,$csql);
+                  if ($cquery) {
+                    
+                    echo "<script>alert('Message Send Successfully Contact With You Very Short Time!!')</script>";
+                  }
+                  # code...
+                } ?>
+                <form id="contactForm" method="post" action="">
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -489,17 +503,17 @@
                     </div>
                      <div class="col-md-12">
                       <div class="form-group">
-                        <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required data-error="Please enter your subject">
+                        <input type="text" placeholder="Subject" id="subject" class="form-control" name="subject" required data-error="Please enter your subject">
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="col-md-12">
                       <div class="form-group"> 
-                        <textarea class="form-control" id="message" placeholder="Your Message" rows="5" data-error="Write your message" required></textarea>
+                        <textarea class="form-control" id="message" placeholder="Your Message" rows="5" name="message" data-error="Write your message" required></textarea>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="submit-button">
-                        <button class="btn btn-common" id="submit" type="submit">Send Message</button>
+                        <button class="btn btn-common" id="submit" type="submit" name="submit">Send Message</button>
                         <div id="msgSubmit" class="h3 text-center hidden"></div> 
                         <div class="clearfix"></div> 
                       </div>
