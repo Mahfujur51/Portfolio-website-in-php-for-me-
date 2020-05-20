@@ -311,14 +311,17 @@
           <a class="filter active btn btn-common" data-filter="all">
             All 
           </a>
-          <a class="filter btn btn-common" data-filter=".design">
+          <a class="filter btn btn-common" data-filter=".1">
             Design 
           </a>
-          <a class="filter btn btn-common" data-filter=".development">
-            Development
+          <a class="filter btn btn-common" data-filter=".2">
+            Wordpress
           </a>
-          <a class="filter btn btn-common" data-filter=".print">
-            Print 
+          <a class="filter btn btn-common" data-filter=".3">
+            PHP 
+          </a>
+          <a class="filter btn btn-common" data-filter=".4">
+            Laravel 
           </a>
         </div>
         <!-- Portfolio Controller/Buttons Ends-->
@@ -343,7 +346,7 @@
             </div>               
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix design print">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix 1 print">
           <div class="portfolio-item">
             <div class="shot-item">
               <img src="assets/img/gallery/img-2.jpg" alt=""/> 
@@ -377,7 +380,7 @@
             </div>               
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development design">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix development 1">
           <div class="portfolio-item">
             <div class="shot-item">
               <img src="assets/img/gallery/img-4.jpg" alt="" /> 
@@ -411,7 +414,7 @@
             </div>               
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print design">
+        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix print 1">
           <div class="portfolio-item">
             <div class="shot-item">
               <img src="assets/img/gallery/img-6.jpg" alt=""/>

@@ -35,6 +35,19 @@
         </div>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-toggle="collapse" href="#ui-portfolio" aria-expanded="false" aria-controls="ui-portfolio">
+          <span class="menu-title">Working Portfolio</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-file-image menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-portfolio">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" href="addportfolio.php">Add Portfolio</a></li>
+            <li class="nav-item"> <a class="nav-link" href="showporfolio.php">Manage Portfolio</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-education" aria-expanded="false" aria-controls="ui-education">
           <span class="menu-title">Education</span>
           <i class="menu-arrow"></i>
