@@ -37,9 +37,9 @@ else{
             <div class="page-header">
               <h3 class="page-title">
                 <span class="page-title-icon bg-gradient-primary text-white mr-2">
-                  <i class="mdi mdi-account-box-outline"></i>
+                 <i class="mdi mdi-book-open-variant menu-icon"></i>
                 </span>
-                About
+               Add  Education
               </h3>
               <nav aria-label="breadcrumb">
                 <ul class="breadcrumb">

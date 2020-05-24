@@ -89,14 +89,14 @@
               <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Designer,Developer and Graphic Designer</p>
               <?php 
 
-               $sql4="SELECT * FROM tbl_social";
-               $query4=mysqli_query($con,$sql4);
-               while ($row4=mysqli_fetch_array($query4)) {
+              $sql4="SELECT * FROM tbl_social";
+              $query4=mysqli_query($con,$sql4);
+              while ($row4=mysqli_fetch_array($query4)) {
                  # code...
-               
+
 
                ?>
-              <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
+               <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
                 <li>
                   <a class="facebook" href="<?php echo $row4['fb']; ?>"><i class="icon-social-facebook"></i></a>
                 </li>
@@ -110,73 +110,73 @@
                   <a class="linkedin" href="<?php echo $row4['linkdin']; ?>"><i class="icon-social-linkedin"></i></a>
                 </li>
               </ul>
-              <?php } ?>
-              <div class="header-button wow fadeInUp" data-wow-delay="1s">
-                <a href="#contact" class="btn btn-common">Contact With Me</a>
-              </div>
+            <?php } ?>
+            <div class="header-button wow fadeInUp" data-wow-delay="1s">
+              <a href="https://github.com/Mahfujur51" target="blank" class="btn btn-common"><i class="fab fa-github fx-4"></i> Visit My GitHub</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Hero Area End -->
+  </div>
+  <!-- Hero Area End -->
 
-  </header>
-  <!-- Header Area wrapper End -->
+</header>
+<!-- Header Area wrapper End -->
 
-  <!-- About Section Start -->
-  <section id="about" class="section-padding">
-    <div class="container">
-      <div class="row"> <?php 
+<!-- About Section Start -->
+<section id="about" class="section-padding">
+  <div class="container">
+    <div class="row"> <?php 
 
-      $psql="SELECT * FROM tbl_about";
-      $pquery=mysqli_query($con,$psql);
-      while ($result=mysqli_fetch_array($pquery)) {
+    $psql="SELECT * FROM tbl_about";
+    $pquery=mysqli_query($con,$psql);
+    while ($result=mysqli_fetch_array($pquery)) {
                 # code...
 
-       ?>
-       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-        <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-          <img class="img-fluid" src="admin/images/<?php echo $result['image']; ?>" alt="">
-        </div>
-      </div> 
-      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+     ?>
+     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+        <img class="img-fluid" src="admin/images/<?php echo $result['image']; ?>" alt="">
+      </div>
+    </div> 
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 
-        <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
-          <h3>Hi Guys!</h3>
-          <p><?php echo $result['description']; ?></p>
-          <div class="about-profile">
-            <ul class="admin-profile">
-              <li><span class="pro-title"> Name </span> <span class="pro-detail"><?php echo $result['name']; ?></span></li>
-              <li><span class="pro-title"> Age </span> <span class="pro-detail"><?php echo $result['age']; ?></span></li>
-              <li><span class="pro-title"> Experience </span> <span class="pro-detail"><?php echo $result['experience']; ?></span></li>
-              <li><span class="pro-title"> Country </span> <span class="pro-detail"><?php echo $result['country']; ?></span></li>
-              <li><span class="pro-title"> Location </span> <span class="pro-detail"><?php echo $result['location']; ?></span></li>
-              <li><span class="pro-title"> e-mail </span> <span class="pro-detail"><?php echo $result['email']; ?></span></li>
-              <li><span class="pro-title"> Phone </span> <span class="pro-detail">+(88)<?php echo $result['phone']; ?></span></li>
-              <li><span class="pro-title"> Freelance </span> <span class="pro-detail"><?php $st=$result['freelancer'];
-                if($st==0)
-                {
-                  ?>
-                  Unavailable
-                <?php }else{ ?>
-                  Available
+      <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+        <h3>Hi Guys!</h3>
+        <p><?php echo $result['description']; ?></p>
+        <div class="about-profile">
+          <ul class="admin-profile">
+            <li><span class="pro-title"> Name </span> <span class="pro-detail"><?php echo $result['name']; ?></span></li>
+            <li><span class="pro-title"> Age </span> <span class="pro-detail"><?php echo $result['age']; ?></span></li>
+            <li><span class="pro-title"> Experience </span> <span class="pro-detail"><?php echo $result['experience']; ?></span></li>
+            <li><span class="pro-title"> Country </span> <span class="pro-detail"><?php echo $result['country']; ?></span></li>
+            <li><span class="pro-title"> Location </span> <span class="pro-detail"><?php echo $result['location']; ?></span></li>
+            <li><span class="pro-title"> e-mail </span> <span class="pro-detail"><?php echo $result['email']; ?></span></li>
+            <li><span class="pro-title"> Phone </span> <span class="pro-detail">+(88)<?php echo $result['phone']; ?></span></li>
+            <li><span class="pro-title"> Freelance </span> <span class="pro-detail"><?php $st=$result['freelancer'];
+            if($st==0)
+            {
+              ?>
+              Unavailable
+            <?php }else{ ?>
+              Available
 
-              <?php   } ?>
+            <?php   } ?>
 
 
-                
-              </span></li>
-            </ul>
-          </div>
-          <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
-          <a href="#contact" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
-        </div>
-        <?php 
-      }
-      ?>
-    </div>   
-  </div>
+
+          </span></li>
+        </ul>
+      </div>
+      <a href="#" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
+      <a href="#contact" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
+    </div>
+    <?php 
+  }
+  ?>
+</div>   
+</div>
 </div>
 </section>
 <!-- About Section End -->
@@ -276,25 +276,25 @@
             <h2 class="timelin-title">Experience</h2>
           </li>
           <?php 
-            $sql3="SELECT * FROM tbl_experience";
-            $query3=mysqli_query($con,$sql3);
-            while ($row3=mysqli_fetch_array($query3)) {
+          $sql3="SELECT * FROM tbl_experience";
+          $query3=mysqli_query($con,$sql3);
+          while ($row3=mysqli_fetch_array($query3)) {
               # code...
-            
+
            ?>
-          <li>
+           <li>
             <div class="content-text">
               <h3 class="line-title"><?php echo $row3['subject']; ?> -<?php echo $row3['company']; ?></h3>
               <span><?php echo $row3['start']; ?> - <?php echo $row3['end']; ?></span>
               <p class="line-text"><?php echo $row3['details']; ?></p>
             </div>
           </li>
-          <?php } ?>
+        <?php } ?>
         
-        </ul>
-      </div>
+      </ul>
     </div>
   </div>
+</div>
 </div>
 </div>
 <!-- Resume Section End -->

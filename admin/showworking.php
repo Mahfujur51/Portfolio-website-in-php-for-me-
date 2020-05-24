@@ -22,9 +22,9 @@ else{
 					<div class="page-header">
 						<h3 class="page-title">
 						<span class="page-title-icon bg-gradient-primary text-white mr-2">
-							<i class="mdi mdi-account-box-outline"></i>
+							 <i class="mdi mdi-laptop menu-icon"></i>
 						</span>
-						Education
+						Show Work Details
 						</h3>
 						<nav aria-label="breadcrumb">
 							<ul class="breadcrumb">
