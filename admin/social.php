@@ -38,9 +38,9 @@ else{
 			<div class="page-header">
 				<h3 class="page-title">
 					<span class="page-title-icon bg-gradient-primary text-white mr-2">
-						<i class="mdi mdi-clipboard-check"></i>
+						 <i class="mdi mdi-access-point menu-icon"></i>
 					</span>
-					Project Updation
+					Social Update
 				</h3>
 				<nav aria-label="breadcrumb">
 					<ul class="breadcrumb">
@@ -55,9 +55,9 @@ else{
 				<div class="col-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
-							<h4 class="card-title">Update Porject</h4>
+							<h4 class="card-title">Update social</h4>
 							<p class="card-description">
-								Update Porject
+							Update social
 							</p>
 							<?php
 							$sql="SELECT * FROM tbl_social WHERE id='1'";

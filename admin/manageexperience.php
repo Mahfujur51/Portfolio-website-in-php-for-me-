@@ -40,7 +40,7 @@ echo "<script>alert('Not Updated Successfully!!')</script>";
 			<span class="page-title-icon bg-gradient-primary text-white mr-2">
 				  <i class="mdi mdi-book-open-variant menu-icon"></i>
 			</span>
-			Update Education
+			Update Experience
 			</h3>
 			<nav aria-label="breadcrumb">
 				<ul class="breadcrumb">
@@ -55,9 +55,9 @@ echo "<script>alert('Not Updated Successfully!!')</script>";
 			<div class="col-12 grid-margin stretch-card">
 				<div class="card">
 					<div class="card-body">
-						<h4 class="card-title">Update Education</h4>
+						<h4 class="card-title">Update Experience</h4>
 						<p class="card-description">
-							Update Education
+							Update Experience
 						</p>
 						<?php
 						$id=$_GET['uid'];

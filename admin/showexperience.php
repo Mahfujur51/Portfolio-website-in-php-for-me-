@@ -24,7 +24,7 @@ else{
 								<span class="page-title-icon bg-gradient-primary text-white mr-2">
 									<i class="mdi mdi-book-open-variant menu-icon"></i>
 								</span>
-								Manage Education
+								Manage Experience
 							</h3>
 							<nav aria-label="breadcrumb">
 								<ul class="breadcrumb">
