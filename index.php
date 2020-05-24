@@ -14,7 +14,7 @@
             <span class="icon-menu"></span>
             <span class="icon-menu"></span>
           </button>
-          <a href="index.php" class="navbar-brand"><img src="assets/img/logo.png" alt=""></a>
+          <a href="index.php" class="navbar-brand"><img src="assets/img/sitelogo.png" alt="" height="60" width="200"></a>
         </div>
         <div class="collapse navbar-collapse" id="main-navbar">
           <ul class="onepage-nev navbar-nav mr-auto w-100 justify-content-end clearfix">
@@ -86,7 +86,7 @@
             <div class="contents">
               <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
               <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Md. Mahfujur Rahman </h2>
-              <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Front-end Web Designer,Developer and Graphic Designer</p>
+              <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Web,Application Designer And Developer </p>
               <?php 
 
               $sql4="SELECT * FROM tbl_social";

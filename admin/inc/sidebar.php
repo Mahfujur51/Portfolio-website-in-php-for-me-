@@ -92,6 +92,12 @@
           <i class="mdi mdi-clipboard-check menu-icon"></i>
         </a>
       </li>
+         <li class="nav-item">
+        <a class="nav-link" href="social.php">
+          <span class="menu-title">Update Social</span>
+          <i class="mdi mdi-access-point menu-icon"></i>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" href="contact.php">
           <span class="menu-title">Message</span>
